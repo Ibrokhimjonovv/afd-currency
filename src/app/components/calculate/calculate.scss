@@ -1,0 +1,133 @@
+#calculate {
+  padding: 20px;
+  margin-top: 90px;
+
+  .calculate-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .calculate-description {
+    color: #fff;
+    font-size: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .one-currency, .updated-date {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f98a29;
+  }
+
+  .one-currency {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  .updated-date {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 20px;
+  }
+
+  .calculate-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    margin: 0 auto;
+    background-color: #1e222b;
+    padding: 40px;
+    border-radius: 20px;
+
+    .line {
+      position: relative;
+      height: 2px;
+      background-color: #f98a29;
+      margin: 40px 0 30px;
+
+      .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #f98a29;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+          width: 70%;
+          height: 70%;
+          // pointer-events: none;
+          
+          &::selection {
+            background-color: transparent;
+          }
+          &:hover {
+            animation: identifier 1s;
+          }
+          @keyframes identifier {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
+
+      }
+    }
+
+    label {
+      color: #ffffffa2;
+    }
+
+    .from,
+    .to {
+      display: flex;
+      gap: 10px;
+
+      input {
+        // border-radius: 10px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background-color: transparent;
+        color: #fff;
+      }
+
+      select {
+        font-size: 20px;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-bottom: 2px solid #fff;
+
+
+        option {
+          font-size: 16px;
+          color: #000;
+        }
+      }
+
+      .currency-input {
+        flex: 1;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .currency-type {
+        width: 100px;
+        padding: 8px;
+      }
+    }
+  }
+}
