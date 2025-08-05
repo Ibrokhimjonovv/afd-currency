@@ -17,7 +17,8 @@
     text-align: center;
   }
 
-  .one-currency, .updated-date {
+  .one-currency,
+  .updated-date {
     width: 500px;
     margin: 0 auto;
     text-align: center;
@@ -64,12 +65,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        z-index: 10;
+
         img {
           width: 70%;
           height: 70%;
           // pointer-events: none;
-          
+
           &::selection {
             background-color: transparent;
           }
@@ -82,7 +84,6 @@
             }
           }
         }
-
       }
     }
 
@@ -111,7 +112,6 @@
         cursor: pointer;
         border-bottom: 2px solid #fff;
 
-
         option {
           font-size: 16px;
           color: #000;
@@ -127,6 +127,64 @@
       .currency-type {
         width: 100px;
         padding: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #calculate {
+    .one-currency,
+    .updated-date {
+      width: 100%;
+    }
+
+    .calculate-inputs {
+      width: 100%;
+      padding: 30px;
+
+      .line {
+        position: relative;
+        height: 2px;
+        background-color: #f98a29;
+        margin: 40px 0 30px;
+
+        .circle {
+          width: 60px;
+          height: 60px;
+        }
+
+      }
+      label {
+        color: #ffffffa2;
+      }
+
+      .from,
+      .to {
+        display: flex;
+        gap: 10px;
+        
+        select {
+
+          option {
+            font-size: 14px;
+            color: #000;
+          }
+        }
+
+        .currency-input {
+          flex: 1;
+          padding: 8px;
+          font-size: 16px;
+          width: 70%;
+        }
+
+        .currency-type {
+          width: 30%;
+          padding: 8px;
+          font-size: 16px;
+
+        }
       }
     }
   }

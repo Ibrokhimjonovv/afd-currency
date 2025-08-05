@@ -1,11 +1,11 @@
 #canvas {
     width: 400px;
     height: 100vh;
-    top: 0;
+    top: 90px;
     right: -100%;
     background-color: #1e222b79;
     position: fixed;
-    z-index: 11;
+    z-index: -11;
     opacity: 0;
     backdrop-filter: blur(3px);
     padding: 80px 20px 20px;
@@ -13,6 +13,7 @@
     &.active {
         right: 0;
         opacity: 1;
+        z-index: 11;
     }
 
     h2 {
@@ -44,5 +45,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #canvas {
+        width: 100%;
     }
 }

@@ -10,25 +10,27 @@ const Header = () => {
         setIsCanvas(!isCanvas);
     }
     return (
-        <header>
-            <div className="header">
-                <div className='qweqwe'>
-                    <div className="logo">
-                        <img src="/logo.png" alt="" />
+        <>
+
+            <header>
+                <div className="header">
+                    <div className='qweqwe'>
+                        <div className="logo">
+                            <img src="/logo.png" alt="" />
+                        </div>
+                        <nav>
+                            <Link href="https://afd-platform.uz">Afd Platform</Link>
+                            <Link href="https://afd-music.vercel.app">Afd Music</Link>
+                        </nav>
                     </div>
-                    <nav>
-                        <Link href="https://afd-platform.uz">Afd Platform</Link>
-                        <Link href="https://afd-music.vercel.app">Afd Music</Link>
-                    </nav>
+                    <div onClick={handleOpen} className={`hamburger ${isCanvas ? "active" : ''}`}>
+                        <div className="line-1"></div>
+                        <div className="line-2"></div>
+                        <div className="line-3"></div>
+                    </div>
                 </div>
-                <div onClick={handleOpen} className={`hamburger ${isCanvas ? "active" : ''}`}>
-                    <div className="line-1"></div>
-                    <div className="line-2"></div>
-                    <div className="line-3"></div>
-                </div>
-                <Canvas isStatus={isCanvas}/>
-            </div>
-        </header>
+            </header>
+            <Canvas isStatus={isCanvas} /></>
     )
 }
 

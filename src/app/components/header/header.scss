@@ -54,7 +54,7 @@ header {
 
       &.active {
         div {
-            position: absolute;
+          position: absolute;
           &.line-1 {
             width: 100%;
             transform: rotate(45deg);
@@ -67,7 +67,6 @@ header {
             transform: rotate(-45deg);
           }
         }
-
       }
 
       div {
@@ -86,6 +85,16 @@ header {
         &.line-3 {
           width: 100%;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    .header {
+      nav {
+        display: none;
       }
     }
   }
