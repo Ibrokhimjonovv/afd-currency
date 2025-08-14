@@ -1,0 +1,17 @@
+.add-right {
+    position: fixed;
+    top: 105px;
+    width: 25%;
+    right: 40px;
+    height: 80vh;
+}
+
+@media screen and (max-width: 500px) {
+    .add-right {
+        position: relative;
+        margin: 0 20px 0;
+        right: unset;
+        top: unset;
+        width: 89%;
+    }
+}

@@ -1,0 +1,17 @@
+.add-left {
+    position: fixed;
+    top: 105px;
+    width: 25%;
+    left: 40px;
+    height: 80vh;
+}
+
+@media screen and (max-width: 500px) {
+    .add-left {
+        position: relative;
+        margin: 20px 20px 0;
+        left: unset;
+        top: 90px;
+        width: 89%;
+    }
+}
