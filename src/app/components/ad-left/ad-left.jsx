@@ -9,8 +9,8 @@ const AdLeft = () => {
       window.yaContextCb = window.yaContextCb || [];
       window.yaContextCb.push(() => {
         window.Ya.Context.AdvManager.render({
-          blockId: "R-A-16590718-1",
-          renderTo: "yandex_rtb_R-A-16590718-1",
+          blockId: "R-A-16590718-2",
+          renderTo: "yandex_rtb_R-A-16590718-2",
         });
       });
     };
