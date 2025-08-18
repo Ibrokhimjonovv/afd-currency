@@ -11,7 +11,7 @@ export const poppins = Poppins({
   variable: '--font-poppins'
 })
 
-export const metadata = { 
+export const metadata = {
   title: "AFD Currency",
   description: "Easy calculate your moneys",
 };
@@ -19,9 +19,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <AccessProvider>
+      <head>
+        <script>window.yaContextCb=window.yaContextCb||[]</script>
+        <script src="https://yandex.ru/ads/system/context.js" async></script>
+      </head>
       <html lang="en" className={`${poppins.variable}`}>
         <body>
-          <Header />  
+          <Header />
           {children}
         </body>
       </html>
