@@ -2,15 +2,14 @@
 import React, { useEffect } from 'react';
 import "./ad-right.scss";
 
-
 const AdRight = () => {
-    useEffect(() => {
+  useEffect(() => {
     const loadYandexAds = () => {
       window.yaContextCb = window.yaContextCb || [];
       window.yaContextCb.push(() => {
         window.Ya.Context.AdvManager.render({
-          blockId: "R-A-16590718-1",
-          renderTo: "yandex_rtb_R-A-16590718-1",
+          blockId: "R-A-16781569-2",
+          renderTo: "yandex_rtb_R-A-16781569-2",
         });
       });
     };
@@ -27,11 +26,12 @@ const AdRight = () => {
       loadYandexAds();
     }
   }, []);
+
   return (
     <div className='add-right'>
-        <div id="yandex_rtb_R-A-16590718-1"></div>
+      <div id="yandex_rtb_R-A-16781569-2"></div>
     </div>
-  )
+  );
 }
 
-export default AdRight
+export default AdRight;

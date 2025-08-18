@@ -2,15 +2,14 @@
 import React, { useEffect } from 'react';
 import "./ad-left.scss";
 
-
 const AdLeft = () => {
-    useEffect(() => {
+  useEffect(() => {
     const loadYandexAds = () => {
       window.yaContextCb = window.yaContextCb || [];
       window.yaContextCb.push(() => {
         window.Ya.Context.AdvManager.render({
-          blockId: "R-A-16590718-2",
-          renderTo: "yandex_rtb_R-A-16590718-2",
+          blockId: "R-A-16781569-1",
+          renderTo: "yandex_rtb_R-A-16781569-1",
         });
       });
     };
@@ -27,11 +26,12 @@ const AdLeft = () => {
       loadYandexAds();
     }
   }, []);
+
   return (
     <div className='add-left'>
-        <div id="yandex_rtb_R-A-16590718-2"></div>
+      <div id="yandex_rtb_R-A-16781569-1"></div>
     </div>
-  )
+  );
 }
 
-export default AdLeft
+export default AdLeft;
